@@ -1,4 +1,4 @@
-name: ci-test-coverage
+name: coverage
 
 on:
   workflow_run:
