@@ -19,7 +19,7 @@ jobs:
       - run: env  
       
       - name: Download artifacts
-        uses: actions/downl\\\oad-artifact@v3
+        uses: actions/download-artifact@v3
         with:
           name: "coverage-ubuntu-20.04-docker" #,"coverage-ubuntu-20.04-crio","cov-ubuntu-20.04-crio","cov-ubuntu-20.04-crio"
       - name: Upload to CodeCov
