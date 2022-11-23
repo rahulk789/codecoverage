@@ -1,0 +1,28 @@
+name: ci-test-coverage
+
+on:
+  workflow_run:
+    workflows: [work1,work2]
+    types:
+      - completed
+
+jobs:
+    codecoverage:
+      name: Measure code coverage
+      runs-on: ubuntu-20.04
+      steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.workflow_run.head_branch }}
+      - run: git branch
+      - run: env  
+      
+      - name: Download artifacts
+        uses: actions/downl\\\oad-artifact@v3
+        with:
+          name: "coverage-ubuntu-20.04-docker" #,"coverage-ubuntu-20.04-crio","cov-ubuntu-20.04-crio","cov-ubuntu-20.04-crio"
+      - name: Upload to CodeCov
+        uses: codecov/codecov-action@v3 
+        with:
+          files: ./KubeArmor/gover.coverprofile
