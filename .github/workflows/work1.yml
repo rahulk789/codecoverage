@@ -33,7 +33,7 @@ jobs:
           go-version: v1.18
 
       - name: testing
-        run: sudo ./.github/workflows/echo.sh
+        run: ./.github/workflows/echo.sh
 
       - name: Upload code coverage
         if: ${{ always() }}
