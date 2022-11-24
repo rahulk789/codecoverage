@@ -4,10 +4,12 @@ on:
   push:
     branches: [main]
     paths:
+      - "calc/**"
       - ".github/workflows/work1.yml"
   pull_request:
     branches: [main]
     paths:
+      - "calc/**"
       - ".github/workflows/work1.yml"
 
 jobs:
