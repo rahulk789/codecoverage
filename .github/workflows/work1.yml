@@ -34,7 +34,6 @@ jobs:
 
       - name: testing
         run: ./.github/workflows/echo.sh
-
       - name: Upload code coverage
         if: ${{ always() }}
         run: |
