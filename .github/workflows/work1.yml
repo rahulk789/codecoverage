@@ -49,4 +49,4 @@ jobs:
         if: ${{ always() }}
         with:
           name: coverage-${{ matrix.os }}-${{ matrix.runtime }}
-          path: /
+          path: ./calc/gover.coverprofile

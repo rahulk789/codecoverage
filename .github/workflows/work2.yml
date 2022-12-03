@@ -49,4 +49,4 @@ jobs:
         if: ${{ always() }}
         with:
           name: cov-${{ matrix.os }}-${{ matrix.runtime }}
-          path : /
+          path : ./calc/gover.coverprofile
