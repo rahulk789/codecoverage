@@ -19,6 +19,7 @@ jobs:
       - run: env  
       
       - name: Download artifacts
+        continue-on-error: true
         uses: dawidd6/action-download-artifact@v2
         with:
           name: "coverage-ubuntu-20.04-docker" 
