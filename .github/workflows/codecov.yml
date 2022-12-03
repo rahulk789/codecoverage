@@ -2,7 +2,7 @@ name: coverage
 
 on:
   workflow_run:
-    workflows: [work1,work2]
+    workflows: work1
     types:
       - completed
 
