@@ -21,9 +21,7 @@ jobs:
       - name: Download artifacts
         uses: dawidd6/action-download-artifact@v2
         with:
-          workflow: work1.yml
           name: "coverage-ubuntu-20.04-docker" 
-            #,"coverage-ubuntu-20.04-crio","cov-ubuntu-20.04-crio","cov-ubuntu-20.04-crio"
       - name: Upload to CodeCov
         uses: codecov/codecov-action@v3 
         with:
