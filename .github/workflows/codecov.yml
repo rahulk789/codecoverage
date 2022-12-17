@@ -26,4 +26,4 @@ jobs:
       - name: Upload to CodeCov
         uses: codecov/codecov-action@v3 
         with:
-          files: ./calc/gover.coverprofile
+          files: ./calc/coverage.out

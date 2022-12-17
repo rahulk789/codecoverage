@@ -38,7 +38,7 @@ jobs:
       - name: Upload code coverage
         if: ${{ always() }}
         run: |
-          go test -coverprofile=gover.coverprofile
+          go test -coverprofile=coverage.out
         working-directory: calc
         env:
           GOPATH: /home/runner/go
@@ -47,4 +47,4 @@ jobs:
         if: ${{ always() }}
         with:
           #          name: cov-${{ matrix.os }}-${{ matrix.runtime }}
-          path : ./calc/gover.coverprofile
+          path: ./calc/coverage.out
