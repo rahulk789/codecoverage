@@ -22,9 +22,8 @@ jobs:
         id: download_artifact
         continue-on-error: true
         uses: dawidd6/action-download-artifact@v2
-        with:  
-          check_artifacts: true  
-          workflow: work2.yml
+      - run: |
+          gh run download -n artifact
           # name: "coverage-ubuntu-20.04-docker" 
       - name: Upload to CodeCov
         uses: codecov/codecov-action@v3 
