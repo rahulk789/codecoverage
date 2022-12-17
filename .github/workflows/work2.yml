@@ -38,7 +38,7 @@ jobs:
       - name: Upload code coverage
         if: ${{ always() }}
         run: |
-          go test cover -func=gover.coverprofile
+          go test -coverprofile=gover.coverprofile
         working-directory: calc
         env:
           GOPATH: /home/runner/go
