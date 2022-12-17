@@ -2,7 +2,7 @@ name: coverage
 
 on:
   workflow_run:
-    workflows: [work1,work2]
+    workflows: [work2]
     types:
       - completed
 
@@ -21,7 +21,9 @@ jobs:
       - name: Download artifacts
         continue-on-error: true
         uses: dawidd6/action-download-artifact@v2
-          # with:
+        with :  
+          check_artifacts: true  
+          workflow: work1.yml
           # name: "coverage-ubuntu-20.04-docker" 
       - name: Upload to CodeCov
         uses: codecov/codecov-action@v3 
