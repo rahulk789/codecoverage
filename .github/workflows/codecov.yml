@@ -20,7 +20,7 @@ jobs:
       
       - name: Download artifacts
         continue-on-error: true
-        uses: actions/download-artifact@v3
+        uses: dawidd6/action-download-artifact@v2
           # name: "coverage-ubuntu-20.04-docker" 
       - name: Upload to CodeCov
         uses: codecov/codecov-action@v3 
