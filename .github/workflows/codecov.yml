@@ -22,11 +22,15 @@ jobs:
         id: download_artifact
         continue-on-error: true
         uses: dawidd6/action-download-artifact@v2
-        env:
-          GH_TOKEN: ${{ github.token }}
       - run: |
           gh run download -n artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+          #uses: actions/download-artifact@v2
+          #with: 
+          #path: ./calc/coverage.out
           # name: "coverage-ubuntu-20.04-docker" 
+      
       - name: Upload to CodeCov
         uses: codecov/codecov-action@v3 
         with:
